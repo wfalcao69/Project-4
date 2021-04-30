@@ -1,0 +1,27 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+    <h1 style="margin-left: 35px;">All Posts</h1>
+    <h6 style="margin-left: 45px;color: blue;">Project created by Wellington Marinho - Caruaru, Brazil</h6>
+    <div id="compose-post" class="row">
+        <div class="container-fluid" style="border: 1px outset red; background-color: lightblue; margin: 35px; padding: 10px">
+          <!--<h4 style="padding: 10px;">New Post</h4>-->
+          <form method="post">
+            {% csrf_token %}
+            <label for="new_post">New Post:</label>
+            <br/>
+            <textarea id="new_post" name="new_post" rows="3" cols="180">
+              Type your new post here
+            </textarea>
+            <br/>
+            <input type="submit" value="Post">
+          </form>
+        </div>
+    </div>
+    <script>
+    </script>
+    <div id="posts-view">
+    </div>
+
+{% endblock %}
